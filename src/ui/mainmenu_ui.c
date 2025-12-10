@@ -2,6 +2,10 @@
 
 #include <stdio.h>
 
+#if __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
+
 #include "game/area.h"
 #include "game/background.h"
 #include "game/critter.h"
@@ -1753,6 +1757,9 @@ bool mainmenu_ui_handle()
         }
 
         tig_window_display();
+#if __EMSCRIPTEN__
+        emscripten_sleep(0);
+#endif
     }
 
     return true;

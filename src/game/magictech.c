@@ -2030,7 +2030,7 @@ void magictech_process()
     }
 
     if (magictech_cur_component_list->cnt > 0) {
-        stru_5E6D28.field_0 = &(magictech_cur_spell_info->field_70[magictech_cur_run_info->action]);
+        stru_5E6D28.field_0 = (S603D20*) &(magictech_cur_spell_info->field_70[magictech_cur_run_info->action]);
         sub_4F40B0(&stru_5E6D28);
 
         if (magictech_cur_run_info->source_obj.obj != OBJ_HANDLE_NULL
@@ -2058,7 +2058,7 @@ void magictech_process()
                 if (sub_4537B0()) {
                     for (comp = 0; comp < magictech_cur_component_list->cnt; comp++) {
                         magictech_cur_component = &(magictech_cur_component_list->entries[comp]);
-                        stru_5E6D28.field_0 = &(magictech_cur_component->aoe);
+                        stru_5E6D28.field_0 = (S603D20*) &(magictech_cur_component->aoe);
 
                         if (sub_4F2D20(&stru_5E6D28)) {
                             sub_453D40();

@@ -2,6 +2,7 @@
 #define TIG_FILE_H_
 
 #include <stdlib.h>
+#include <time.h>
 
 #include "tig/guid.h"
 #include "tig/types.h"
